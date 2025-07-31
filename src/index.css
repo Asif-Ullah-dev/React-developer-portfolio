@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradient-slide {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.animate-gradient-slide {
+  background-size: 200% 200%;
+  animation: gradient-slide 6s ease-in-out infinite;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  @apply font-inter;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, #052a88, #df6767);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+/* Theme: Light */
+html.light {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* Theme: Dark */
+html.dark {
+  background-color: #0d0d0d;
+  color: #f1f1f1;
+}
+
+/* Theme: Midnight (deep navy style) */
+html.midnight {
+  background-color: #0f172a;
+  color: #cbd5e1;
+}
+
+/* Theme: Neon (black background with green glow) */
+html.neon {
+  background-color: #000000;
+  color: #39ff14;
+}
+
+/* Theme: Glassmorphism (frosted look) */
+html.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #ffffff;
+}
+
+
+
+
