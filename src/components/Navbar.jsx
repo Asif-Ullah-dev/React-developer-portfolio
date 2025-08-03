@@ -85,31 +85,33 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          className="md:hidden text-white text-2xl"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          ☰
-        </button>
-      </div>
+       {/* Mobile Menu Toggle */}
+<button
+  className="md:hidden text-white text-2xl"
+  onClick={() => setIsOpen(!isOpen)}
+>
+  ☰
+</button>
+</div> {/* ← untouched as requested 😎 */}
 
-      {/* Mobile Menu */}
-      {isOpen && (
-        <ul className="md:hidden flex flex-col items-center bg-black/90 text-white pb-6">
-          {sections.map((section) => (
-            <li key={section.name}>
-              <a
-                href={`#${section.name.replace(/\s+/g, "")}`}
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/10 mt-2 hover:bg-cyan-600 transition"
-              >
-                {section.icon}
-                {section.name}
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
+{/* 🔄 Mobile Sidebar Menu (No Icons + Right Aligned + Compact) */}
+{isOpen && (
+  <div className="fixed top-14 right-2 w-fit max-w-[180px] bg-black/90 p-2 rounded-lg z-50 shadow-lg md:hidden">
+    <ul className="flex flex-col gap-2 items-end">
+      {sections.map((section) => (
+        <li key={section.name} className="w-full">
+          <a
+            href={`#${section.name.replace(/\s+/g, "")}`}
+            className="w-full flex justify-end px-4 py-2 text-sm rounded-full bg-white/10 border border-white/10 hover:bg-cyan-600 transition whitespace-nowrap"
+          >
+            {section.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
     </motion.nav>
   );
 }

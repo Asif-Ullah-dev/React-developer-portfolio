@@ -132,7 +132,7 @@ export default function Contact() {
           <input
             type="text"
             name="name"
-            autocomplete="name"
+            autoComplete="name"
             placeholder="Your Name"
             className="w-full p-3 rounded-lg bg-white/10 border border-white/20 placeholder-gray-400 text-white"
             required
@@ -140,7 +140,7 @@ export default function Contact() {
           <input
             type="email"
             name="email"
-            autocomplete="email"
+            autoComplete="email"
             placeholder="Your Email"
             className="w-full p-3 rounded-lg bg-white/10 border border-white/20 placeholder-gray-400 text-white"
             required
@@ -148,7 +148,7 @@ export default function Contact() {
           <input
             type="tel"
             name="phone"
-            autocomplete="tel"
+            autoComplete="tel"
             placeholder="Your Phone"
             className="w-full p-3 rounded-lg bg-white/10 border border-white/20 placeholder-gray-400 text-white"
           />
@@ -156,7 +156,7 @@ export default function Contact() {
             name="message"
             placeholder="Your Message"
             rows="4"
-            autocomplete="off"
+            autoComplete="off"
             className="w-full p-3 rounded-lg bg-white/10 border border-white/20 placeholder-gray-400 text-white"
           ></textarea>
 
@@ -175,7 +175,7 @@ export default function Contact() {
         </form>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes glowPulse {
           0%,
           100% {

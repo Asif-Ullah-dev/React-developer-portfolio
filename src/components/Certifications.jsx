@@ -119,7 +119,7 @@ export default function Certifications() {
         ))}
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes glowPulse {
           0%, 100% {
             box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
@@ -130,7 +130,7 @@ export default function Certifications() {
         }
       `}</style>
       {/* Moving Light Pass Layer — Red + Yellow gradient sweeping across the section */}
-<style jsx>{`
+<style>{`
   @keyframes glow-slide {
     0% {
       transform: translateX(-150%);

@@ -137,7 +137,7 @@ export default function Education() {
         </div>
       </motion.div>
         {/* Moving Light Pass Layer — Red + Yellow gradient sweeping across the section */}
-<style jsx>{`
+<style>{`
   @keyframes glow-slide {
     0% {
       transform: translateX(-150%);

@@ -78,7 +78,7 @@ export default function Portfolio() {
       </div>
 
       {/* Glow-layer animation styles */}
-      <style jsx>{`
+      <style>{`
         @keyframes glow-slide {
           0% {
             transform: translateX(-150%);
