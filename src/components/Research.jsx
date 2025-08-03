@@ -37,11 +37,12 @@ export default function Research() {
           className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-8 text-left shadow-xl transition duration-300 mx-auto max-w-3xl"
         >
           <h3 className="text-2xl font-bold text-indigo-200 mb-2">
-            🧠 Deep Learning for Symbolic Pattern Recognition
+            🖼️ Mathematical Modeling for Image Denoising in Computer Vision.
           </h3>
           <p className="text-gray-300 text-sm mb-6 leading-relaxed">
-            Developed a neural network model to identify and classify symbolic structures in mathematical equations.
-            Research involved dataset construction, CNN architectures, and model evaluation.
+            Developed a mathematical model to effectively remove noise from images while preserving critical edge details. 
+            This approach enhances visual clarity and strengthens feature extraction, enabling more accurate and efficient 
+            performance in computer vision tasks such as recognition and analysis.
           </p>
 
           {/* Code Button */}

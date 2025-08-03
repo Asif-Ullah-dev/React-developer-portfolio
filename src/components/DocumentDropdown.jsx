@@ -5,7 +5,7 @@ export default function DocumentDropdown() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const containerRef = useRef(null);
 
-  // Close dropdown when clicked outside
+  // close dropdown if clicked outside
   useEffect(() => {
     const onClickOutside = (e) => {
       if (containerRef.current && !containerRef.current.contains(e.target)) {
@@ -22,54 +22,55 @@ export default function DocumentDropdown() {
       file: '/resume.pdf',
     },
     europass: {
-      label: 'EurPass CV',
+      label: 'EuroPass',
       file: '/EuroPass CV-Lg.pdf',
     },
   };
 
   return (
-    <div
-      ref={containerRef}
-      className="relative inline-block text-left animate-pulse"
-    >
-      {/* Documents Button */}
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.98 }}
-        onClick={() => setDropdownOpen((prev) => !prev)}
-        className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 
-                   hover:from-purple-600 hover:to-cyan-500
-                   text-white font-bold rounded-full shadow-lg
-                   drop-shadow-md hover:drop-shadow-xl
-                   transition-all duration-300 ease-in-out"
+    <div ref={containerRef} className="relative inline-block text-left">
+      {/* Toggle Button */}
+      <button
+        type="button"
+        onClick={() => setDropdownOpen((o) => !o)}
+        className="px-3 py-2 bg-gradient-to-r from-red-500 to-yellow-400 
+                   text-white font-bold rounded-full shadow-lg 
+                   hover:from-yellow-400 hover:to-red-500 
+                   hover:shadow-yellow-300 transition-all duration-300 
+                   focus:outline-none focus:ring-4 focus:ring-yellow-200"
       >
         Documents
-      </motion.button>
+      </button>
 
       {/* Dropdown Menu */}
       <AnimatePresence>
         {dropdownOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, y: -10 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: -10 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-            className="absolute right-0 mt-3 w-56 z-50 flex flex-col gap-2"
+            initial={{ opacity: 0, y: -10, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -10, scale: 0.9 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 22 }}
+            className="absolute mt-4 left-1/5 transform -translate-x-1/5 w-max" 
           >
-            {Object.entries(docs).map(([key, { label, file }]) => (
-              <a
-                key={key}
-                href={file}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block px-4 py-2 bg-white/10 backdrop-blur border border-cyan-400 
-                           text-cyan-200 rounded-md font-medium 
-                           hover:bg-cyan-600 hover:text-white hover:shadow-xl 
-                           transition duration-200 ease-in-out"
-              >
-                {label}
-              </a>
-            ))}
+            <div className="flex flex-row gap-2 flex-wrap justify-center">
+              {Object.entries(docs).map(([key, { label, file }], idx) => (
+                <a
+                  key={key}
+                  href={file}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`px-5 py-3 rounded-full text-white font-semibold text-sm
+                    bg-gradient-to-r ${idx === 0
+                      ? 'from-red-600 to-yellow-400'
+                      : 'from-yellow-400 to-red-600'
+                    }
+                    hover:shadow-lg hover:shadow-yellow-400 
+                    transition duration-300 ease-in-out`}
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

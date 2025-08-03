@@ -123,7 +123,7 @@ export default function Contact() {
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
+          //onSubmit={handleSubmit}
           className="max-w-2xl mx-auto space-y-6"
         >
           <input type="hidden" name="form-name" value="contact" />
@@ -132,6 +132,7 @@ export default function Contact() {
           <input
             type="text"
             name="name"
+            autocomplete="name"
             placeholder="Your Name"
             className="w-full p-3 rounded-lg bg-white/10 border border-white/20 placeholder-gray-400 text-white"
             required
@@ -139,6 +140,7 @@ export default function Contact() {
           <input
             type="email"
             name="email"
+            autocomplete="email"
             placeholder="Your Email"
             className="w-full p-3 rounded-lg bg-white/10 border border-white/20 placeholder-gray-400 text-white"
             required
@@ -146,6 +148,7 @@ export default function Contact() {
           <input
             type="tel"
             name="phone"
+            autocomplete="tel"
             placeholder="Your Phone"
             className="w-full p-3 rounded-lg bg-white/10 border border-white/20 placeholder-gray-400 text-white"
           />
@@ -153,6 +156,7 @@ export default function Contact() {
             name="message"
             placeholder="Your Message"
             rows="4"
+            autocomplete="off"
             className="w-full p-3 rounded-lg bg-white/10 border border-white/20 placeholder-gray-400 text-white"
           ></textarea>
 

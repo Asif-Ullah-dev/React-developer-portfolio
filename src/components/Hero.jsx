@@ -116,7 +116,11 @@ export default function Hero() {
             whileHover={{ scale: 1.05, boxShadow: "0 0 15px #06b6d4" }}
             transition={{ type: "spring", stiffness: 300 }}
             href="#Projects"
-            className="px-6 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full shadow-lg transition"
+            className="px-3 py-2 bg-gradient-to-r from-red-500 to-yellow-400 
+                   text-white font-bold rounded-full shadow-lg 
+                   hover:from-yellow-400 hover:to-red-500 
+                   hover:shadow-yellow-300 transition-all duration-300 
+                   focus:outline-none focus:ring-4 focus:ring-yellow-200"
           >
             View Projects
           </motion.a>
