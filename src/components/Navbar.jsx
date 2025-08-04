@@ -92,7 +92,7 @@ export default function Navbar() {
 >
   ☰
 </button>
-</div> {/* ← untouched as requested 😎 */}
+</div>
 
 {/* 🔄 Mobile Sidebar Menu (No Icons + Right Aligned + Compact) */}
 {isOpen && (
@@ -102,6 +102,7 @@ export default function Navbar() {
         <li key={section.name} className="w-full">
           <a
             href={`#${section.name.replace(/\s+/g, "")}`}
+            onClick={() => setIsOpen(false)}
             className="w-full flex justify-end px-4 py-2 text-sm rounded-full bg-white/10 border border-white/10 hover:bg-cyan-600 transition whitespace-nowrap"
           >
             {section.name}
