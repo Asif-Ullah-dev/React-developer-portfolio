@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Player } from "@lottiefiles/react-lottie-player";
-import animation from '../assets/Animations/developer.json';
+import animation from '../assets/Animations/AI Tools.json';
 
 export default function AboutMe() {
   

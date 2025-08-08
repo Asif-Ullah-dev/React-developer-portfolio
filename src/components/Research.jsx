@@ -36,9 +36,12 @@ export default function Research() {
           whileHover={{ scale: 1.02 }}
           className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-8 text-left shadow-xl transition duration-300 mx-auto max-w-3xl"
         >
-          <h3 className="text-2xl font-bold text-indigo-200 mb-2">
+          <motion.h3
+          whileHover={{ scale: 1.05, textShadow: "0px 0px 20px #38bdf8" }} 
+          className="text-3xl sm:text-2xl font-extrabold text-yellow-400 mb-4 animate-pulse"
+          >
             🖼️ Mathematical Modeling for Image Denoising in Computer Vision.
-          </h3>
+          </motion.h3>
           <p className="text-gray-300 text-sm mb-6 leading-relaxed">
             Developed a mathematical model to effectively remove noise from images while preserving critical edge details. 
             This approach enhances visual clarity and strengthens feature extraction, enabling more accurate and efficient 

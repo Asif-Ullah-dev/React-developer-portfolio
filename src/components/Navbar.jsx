@@ -10,12 +10,12 @@ import {
   FaCertificate,
   FaVideo,
   FaEnvelope,
-  FaSearch,
+  //FaSearch,
 } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [showSearch, setShowSearch] = useState(false);
+  //const [showSearch, setShowSearch] = useState(false);
 
   const sections = [
     { name: "Home", icon: <FaHome /> },
@@ -46,7 +46,7 @@ export default function Navbar() {
           Asif Ullah
         </motion.h1>
 
-        {/* Search bar */}
+        {/* Search bar 
         <div className="flex items-center gap-4">
           {showSearch && (
             <input
@@ -63,7 +63,7 @@ export default function Navbar() {
           >
             <FaSearch />
           </motion.button>
-        </div>
+        </div> */}
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-5 text-sm font-medium items-center">

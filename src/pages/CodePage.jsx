@@ -12,9 +12,12 @@ export default function CodePage() {
         className="w-full max-w-4xl text-center space-y-8"
       >
         {/* Heading */}
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-violet-300">
-          Research Code & Documentation
-        </h1>
+        <motion.h1 
+          whileHover={{ scale: 1.05, textShadow: "0px 0px 20px #38bdf8" }}
+          className="text-3xl sm:text-4xl font-extrabold text-red-700 mb-4 animate-pulse"
+        >
+          Research Documentation & Code 
+        </motion.h1>
 
         {/* Introduction */}
         <motion.p
@@ -29,7 +32,7 @@ export default function CodePage() {
 
         {/* Mathematical Model */}
         <div className="bg-white/5 border border-white/10 rounded-xl p-5 sm:p-6 text-left text-gray-100 text-sm sm:text-base">
-          <p className="text-base sm:text-lg text-gray-300 mb-4 font-semibold">
+          <p className="text-base sm:text-lg text-yellow-500 mb-4 font-semibold">
             📐 My variational denoising model is formulated as:
           </p>
           <BlockMath math={String.raw`
@@ -37,38 +40,38 @@ export default function CodePage() {
             + \lambda \int_\Omega \left(u - (1-\alpha)u_0 - \alpha M(u_0)\right)^2 dxdy
           `} />
           <div className="mt-4 space-y-2 text-sm sm:text-base">
-            <p>▶️ <strong>First term:</strong> Applies a Novel Region Edge Detector (NRED) to preserve edges.</p>
-            <p>▶️ <strong>Second term:</strong> Balances the noisy image and median-filtered version.</p>
-            <p>▶️ <strong>Parameters:</strong> α ∈ (0,1) adjusts median weight; λ &gt; 0 controls regularization.</p>
+            <p>🔴 <strong>First term:</strong> Applies a Novel Region Edge Detector (NRED) to preserve edges.</p>
+            <p>🔴 <strong>Second term:</strong> Balances the noisy image and median-filtered version.</p>
+            <p>🔴 <strong>Parameters:</strong> α ∈ (0,1) adjusts median weight; λ &gt; 0 controls regularization.</p>
           </div>
         </div>
 
         {/* Contributions, Results, Settings */}
         <div className="text-left space-y-6 px-2 sm:px-4 text-sm sm:text-base text-gray-200">
           <div>
-            <p className="font-semibold text-violet-400 text-base sm:text-lg">📌 Key Contributions:</p>
+            <p className="font-semibold text-yellow-500 text-base sm:text-lg">📌 Key Contributions:</p>
             <ul className="pl-4 list-none space-y-2 mt-2">
-              <li>▶️ Developed a variational model preserving edges via regional edge detection.</li>
-              <li>▶️ Enhanced denoising using median filtering with detail retention.</li>
-              <li>▶️ Used Euler-Lagrange optimization for efficient performance.</li>
+              <li>🔴 Developed a variational model preserving edges via regional edge detection.</li>
+              <li>🔴 Enhanced denoising using median filtering with detail retention.</li>
+              <li>🔴 Used Euler-Lagrange optimization for efficient performance.</li>
             </ul>
           </div>
 
           <div>
-            <p className="font-semibold text-violet-400 text-base sm:text-lg">📊 Evaluation & Results:</p>
+            <p className="font-semibold text-yellow-500 text-base sm:text-lg">📊 Evaluation & Results:</p>
             <ul className="pl-4 list-none space-y-2 mt-2">
-              <li>▶️ Assessed using PSNR, SSIM, and FSIM metrics.</li>
-              <li>▶️ Outperformed ROF and Matta models in quality and structure.</li>
-              <li>▶️ Better edge/feature preservation demonstrated quantitatively.</li>
+              <li>🔴 Assessed using PSNR, SSIM, and FSIM metrics.</li>
+              <li>🔴 Outperformed ROF and Matta models in quality and structure.</li>
+              <li>🔴 Better edge/feature preservation demonstrated quantitatively.</li>
             </ul>
           </div>
 
           <div>
-            <p className="font-semibold text-violet-400 text-base sm:text-lg">⚙️ Experimental Settings:</p>
+            <p className="font-semibold text-yellow-500 text-base sm:text-lg">⚙️ Experimental Settings:</p>
             <ul className="pl-4 list-none space-y-2 mt-2">
-              <li>▶️ Alpha (α): 0.7 for balanced denoising.</li>
-              <li>▶️ Lambda (λ): 30 for regularization control.</li>
-              <li>▶️ Step size: 0.001 | Iterations: 300</li>
+              <li>🔴 Alpha (α): 0.7 for balanced denoising.</li>
+              <li>🔴 Lambda (λ): 30 for regularization control.</li>
+              <li>🔴 Step size: 0.001 | Iterations: 300</li>
             </ul>
           </div>
         </div>
@@ -78,7 +81,7 @@ export default function CodePage() {
           href="https://github.com/Asif-Ullah-dev"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-10 px-6 py-3 bg-gradient-to-r from-pink-500 to-violet-600 hover:from-violet-600 hover:to-pink-500 text-white rounded-full shadow-lg transition duration-300 animate-pulse"
+          className="inline-block mt-10 px-6 py-3 bg-gradient-to-r from-yellow-500 to-red-700 hover:from-cyan-700 hover:to-pink-700 text-white rounded-full shadow-lg transition duration-300 animate-pulse"
         >
           Visit GitHub Repository (MATLAB Code)
         </motion.a>
