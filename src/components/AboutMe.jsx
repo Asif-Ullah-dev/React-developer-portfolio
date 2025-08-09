@@ -59,7 +59,7 @@ export default function AboutMe() {
             <motion.div
               whileHover={{ scale: 1.05, rotate: 1 }}
               transition={{ type: "spring", stiffness: 200 }}
-              className="bg-white/10 rounded-xl p-6 shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer hover:bg-indigo-800/30 backdrop-blur"
+              className="bg-white/10 rounded-xl p-6 shadow-md hover:shadow-2xl  hover:shadow-yellow-600 transition-all duration-300 cursor-pointer hover:bg-indigo-800/30 backdrop-blur"
             >
               <h4 className="text-xl font-bold text-indigo-200 mb-2 glow-pink hover:text-pink-300 transition-colors">
                 🔢 Mathematical Foundation
@@ -73,7 +73,7 @@ export default function AboutMe() {
             <motion.div
               whileHover={{ scale: 1.05, rotate: -1 }}
               transition={{ type: "spring", stiffness: 200 }}
-              className="bg-white/10 rounded-xl p-6 shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer hover:bg-indigo-800/30 backdrop-blur"
+              className="bg-white/10 rounded-xl p-6 shadow-md hover:shadow-2xl  hover:shadow-red-700 transition-all duration-300 cursor-pointer hover:bg-indigo-800/30 backdrop-blur"
             >
               <h4 className="text-xl font-bold text-indigo-200 mb-2 hover:text-yellow-300 transition-colors">
                 🧠 Deep Learning Enthusiast

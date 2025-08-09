@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 //import { FaCertificate } from 'react-icons/fa';
+import { useState, useRef } from 'react';
+
 
 import gikiLogo from '../assets/Images/Giki.png';
 import nvidiaLogo from '../assets/Images/nvidia.png';
@@ -66,6 +68,9 @@ const certs = [
 ];
 
 export default function Certifications() {
+  const [showFor, setShowFor] = useState(null);
+  const msgTimer = useRef();
+
   return (
     <section
       id="Certifications"
@@ -106,15 +111,28 @@ export default function Certifications() {
             </div>
 
             <p className="text-sm text-white/80 mb-4">Issued by: {cert.org}</p>
+            {showFor === index && (
+  <p className="mb-2 text-amber-300 text-sm">
+    Access restricted. please contact the author to request permission.
+  </p>
+)}
 
-            <a
-              href={cert.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`inline-block mt-2 px-4 py-2 text-sm rounded-full transition duration-300 animate-[glowPulse_2s_infinite] ${cert.button}`}
-            >
-              View Certificate
-            </a>
+
+<a
+  href={cert.link}
+  onClick={(e) => {
+    e.preventDefault();
+    setShowFor(index);               // show message for this card
+    clearTimeout(msgTimer.current);  // reset auto-hide timer
+    msgTimer.current = setTimeout(() => setShowFor(null), 2500);
+  }}
+  className={`inline-block mt-2 px-4 py-2 text-sm rounded-full transition duration-300 animate-[glowPulse_2s_infinite] ${cert.button}`}
+>
+  View Certificate
+</a>
+
+
+
           </motion.div>
         ))}
       </div>

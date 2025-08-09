@@ -31,7 +31,7 @@ export default function Video() {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-extrabold text-center text-pink-300 mb-12 hover:text-pink-400 transition cursor-pointer"
+        className="text-4xl font-extrabold text-center text-cyan-600 mb-12 hover:text-violet-600 transition cursor-pointer"
       >
         My Video Tutorials
       </motion.h2>
@@ -44,7 +44,7 @@ export default function Video() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             whileHover={{ scale: 1.03 }}
-            className="rounded-xl shadow-2xl bg-gradient-to-br from-rose-800 via-fuchsia-800 to-purple-900 p-4 hover:shadow-pink-500/40 transition duration-300"
+            className="rounded-xl shadow-2xl bg-gradient-to-br from-rose-800 via-fuchsia-800 to-purple-900 p-4 hover:shadow-green-600  transition duration-300"
           >
             {/* Uncomment when video or image is added */}
             { <video

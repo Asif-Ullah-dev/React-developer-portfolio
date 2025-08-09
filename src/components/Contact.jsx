@@ -122,7 +122,7 @@ export default function Contact() {
           name="contact"
           method="POST"
           data-netlify="true"
-          netlify-honeypot="bot-field"
+          data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
           className="max-w-2xl mx-auto space-y-6"
         >
@@ -151,6 +151,7 @@ export default function Contact() {
             autoComplete="tel"
             placeholder="Your Phone"
             className="w-full p-3 rounded-lg bg-white/10 border border-white/20 placeholder-gray-400 text-white"
+            required 
           />
           <textarea
             name="message"
@@ -158,11 +159,12 @@ export default function Contact() {
             rows="4"
             autoComplete="off"
             className="w-full p-3 rounded-lg bg-white/10 border border-white/20 placeholder-gray-400 text-white"
+            required
           ></textarea>
 
           <button
             type="submit"
-            className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-indigo-600 hover:to-purple-600 text-white px-6 py-3 rounded-full shadow-lg transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 animate-[glowPulse_2s_infinite]"
+            className="bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-indigo-600 hover:to-purple-600 text-white px-6 py-3 rounded-full shadow-lg transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 animate-[glowPulse_2s_infinite]"
           >
             REACH OUT
           </button>

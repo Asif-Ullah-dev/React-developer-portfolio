@@ -92,7 +92,7 @@ export default function Skills() {
                     href={skill.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 ${skill.color} hover:bg-white/20 transition transform hover:scale-105 shadow-md`}
+                    className={`flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 ${skill.color} hover:bg-red-800 transition transform hover:scale-105 shadow-md`}
                   >
                     <span className="text-xl">{skill.icon}</span>
                     <span className="text-sm font-medium">{skill.name}</span>

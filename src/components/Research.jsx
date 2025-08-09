@@ -22,7 +22,7 @@ export default function Research() {
         <motion.h2
           whileHover={{ scale: 1.05, color: '#c084fc' }} // violet-400
           transition={{ duration: 0.3 }}
-          className="text-4xl sm:text-5xl font-extrabold mb-6 cursor-pointer transition-colors duration-300 hover:text-violet-400"
+          className="text-4xl sm:text-5xl font-extrabold mb-6 cursor-pointer transition-colors duration-300  text-yellow-600 hover:text-cyan-500"
         >
           Research Work
         </motion.h2>
@@ -34,7 +34,7 @@ export default function Research() {
         {/* Research Card */}
         <motion.div
           whileHover={{ scale: 1.02 }}
-          className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-8 text-left shadow-xl transition duration-300 mx-auto max-w-3xl"
+          className="bg-white/10 backdrop-blur-md border border-white/10  hover:shadow-yellow-600 rounded-2xl p-8 text-left shadow-xl transition duration-300 mx-auto max-w-3xl"
         >
           <motion.h3
           whileHover={{ scale: 1.05, textShadow: "0px 0px 20px #38bdf8" }} 
@@ -52,7 +52,7 @@ export default function Research() {
           <div className="mt-4">
             <Link
               to="/code" // Change to  route path
-              className="inline-block px-5 py-2 border border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white rounded-full transition"
+              className="inline-block px-5 py-2 border border-indigo-500 text-indigo-500 hover:bg-red-800 hover:text-white rounded-full transition"
             >
               View Code
             </Link>

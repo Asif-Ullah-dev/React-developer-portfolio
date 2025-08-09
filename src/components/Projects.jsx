@@ -33,7 +33,7 @@ export default function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="text-4xl sm:text-5xl font-extrabold text-center text-cyan-300 hover:text-cyan-400 transition duration-300 cursor-pointer mb-10"
+        className="text-4xl sm:text-5xl font-extrabold text-center text-red-600 hover:text-green-600 transition duration-300 cursor-pointer mb-10"
       >
         Featured Projects
       </motion.h2>
@@ -47,9 +47,9 @@ export default function Projects() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             whileHover={{ scale: 1.03 }}
-            className="rounded-2xl p-6 shadow-2xl border border-cyan-500/30 bg-gradient-to-br from-cyan-900 via-slate-800 to-gray-900 hover:shadow-cyan-400/30 transition-all duration-300"
+            className="rounded-2xl p-6 shadow-2xl border border-cyan-500/30 bg-gradient-to-br from-cyan-900 via-slate-800 to-gray-900 hover:shadow-red-600 transition-all duration-300"
           >
-            <h3 className="text-xl font-bold text-cyan-200 mb-2">{project.title}</h3>
+            <h3 className="text-2xl font-bold text-cyan-200 mb-2">{project.title}</h3>
             <p className="text-gray-300 text-sm mb-6">{project.description}</p>
             <Link
               to={project.route}
